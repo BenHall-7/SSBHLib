@@ -19,17 +19,16 @@ after_build:
     appveyor PushArtifact MATLab.zip
 deploy:
 - provider: GitHub
-  tag: v3.0
-  release: paracobNET
+  tag: v1.0
+  release: MATLab
   description: |-
     This build is updated every commit (if possible).
-    Always recommended to use latest versions.
     Datetime: $(TIMESTAMP)
     Message: "$(APPVEYOR_REPO_COMMIT_MESSAGE)"
   auth_token:
     secure: HzJBzil1ZFH9SbYQowaI8czAc0tVGO//+TX3qZz7TwTg9pLCQXKEnCe5HWojNeZ7
-  repository: BenHall-7/paracobNET
-  artifact: ParamXML.zip, ParamXML-exe.zip, prcScript.zip, prcScript-exe.zip, prcEditor.zip
+  repository: BenHall-7/SSBHLib
+  artifact: MATLab.zip
   force_update: true
   on:
     branch: master
